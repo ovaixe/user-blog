@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+
+{% block content %}
+    <div class="container py-5">
+        <div class="media">
+        <img class="rounded-circle account-img" src="{{ url_for('static', filename='imgs/'+user.image_file) }}">
+        <div class="media-body">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+            <p>Total Posts: {{ total_posts }}</p>
+        </div>
+        </div>
+        
+        {% for post in posts %}
+            <div class="jumbotron post-card p-3 mt-5">
+                <h1 class="display-6 p-title">{{ post.title }}</h1>
+                <p class="lead">{{ post.content }}.</p>
+                <hr class="my-4">
+                <img class="rounded-circle account-img" src="{{ url_for('static', filename='imgs/'+post.author.image_file) }}">
+                <p>Post created by <b>{{ post.author.username }}</b> on {{ post.date_posted.strftime('%Y-%m-%d') }}.</p>
+                <a class="btn btn-primary btn-sm" href="{{ url_for('posts.post', post_id=post.id) }}" role="button">Learn more</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock content %}

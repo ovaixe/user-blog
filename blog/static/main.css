@@ -1,0 +1,15 @@
+.post-card {
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+.account-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .p-title {
+      color: #00C497;
+  }
