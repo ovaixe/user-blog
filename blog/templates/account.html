@@ -1,7 +1,7 @@
 {% extends 'home.html' %}
 
 {% block content %}
-<div class="container w-50 py-5">
+<div class="container p-5">
     <div class="media">
       <img class="rounded-circle account-img" src="{{ url_for('static', filename='imgs/'+current_user.image_file) }}">
       <div class="media-body">
