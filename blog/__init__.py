@@ -25,7 +25,7 @@ def create_app(config_class=Config):
     # app.config['MAIL_PORT'] = 587
     # app.config['MAIL_USE_TLS'] = True
     # app.config['MAIL_USERNAME'] = 'owaisbhat996@gmail.com'
-    # app.config['MAIL_PASSWORD'] = 'googleowais'
+    # app.config['MAIL_PASSWORD'] = ''
 
     db.init_app(app)
     bcrypt.init_app(app)
